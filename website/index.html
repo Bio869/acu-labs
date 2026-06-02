@@ -4,7 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ACU Labs — Acoustic Counter-UAS research and development. Detecting fiber-optic drones beyond the reach of RF." />
+  <meta name="theme-color" content="#0a0d0a" />
   <title>ACU LABS // Acoustic Counter-UAS</title>
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ACU LABS // Acoustic Counter-UAS" />
+  <meta property="og:description" content="Acoustic sensing R&D for detecting fiber-optic UAVs that bypass conventional RF detection. Simulation-only research demonstrator." />
+  <meta property="og:url" content="https://acu-labs.com/" />
+  <meta property="og:site_name" content="ACU LABS" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ACU LABS // Acoustic Counter-UAS" />
+  <meta name="twitter:description" content="Acoustic sensing R&D for fiber-optic UAV detection. Simulation-only research demonstrator." />
+
+  <!-- Inline SVG favicon: amber square frame with [ACU] mark -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0d0a'/%3E%3Crect x='6' y='6' width='52' height='52' fill='none' stroke='%23f0c040' stroke-width='3'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='18' font-weight='bold' fill='%23f0c040' text-anchor='middle'%3EACU%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -14,26 +29,34 @@
   <div class="grid-overlay" aria-hidden="true"></div>
   <div class="scanline" aria-hidden="true"></div>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <header class="topbar">
+    <div class="classification-bar" role="note" aria-label="Classification">
+      <span class="classification-full">UNCLASSIFIED // RESEARCH DEMONSTRATION</span>
+      <span class="classification-short">UNCLASSIFIED // R&amp;D DEMO</span>
+    </div>
     <div class="topbar-inner">
-      <div class="brand">
+      <a href="#" class="brand" aria-label="ACU Labs home">
         <span class="brand-mark">[ ACU ]</span>
-        <span class="brand-divider">//</span>
+        <span class="brand-divider" aria-hidden="true">//</span>
         <span class="brand-name">ACOUSTIC COUNTER-UAS</span>
-      </div>
-      <nav class="nav">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="nav" aria-label="Primary">
         <a href="#mission">Mission</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#tech">Technology</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
-    <div class="classification-bar">
-      <span>UNCLASSIFIED // RESEARCH DEMONSTRATION</span>
-    </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="hero-content">
         <div class="hero-tags">
@@ -60,7 +83,7 @@
             <dd>4-NODE</dd>
           </div>
           <div>
-            <dt>DETECTION MODE</dt>
+            <dt>DETECTION</dt>
             <dd>PASSIVE / ACOUSTIC</dd>
           </div>
           <div>
@@ -74,12 +97,26 @@
         <div class="hero-frame-corner tr"></div>
         <div class="hero-frame-corner bl"></div>
         <div class="hero-frame-corner br"></div>
+        <div class="hero-frame-readout hero-frame-readout-tl">
+          <span>SYS</span><span>NOMINAL</span>
+        </div>
+        <div class="hero-frame-readout hero-frame-readout-tr">
+          <span>AZ</span><span>327.4&deg;</span>
+        </div>
+        <div class="hero-frame-readout hero-frame-readout-bl">
+          <span>SNR</span><span>+18.2dB</span>
+        </div>
         <div class="hero-target">
           <div class="ring r1"></div>
           <div class="ring r2"></div>
           <div class="ring r3"></div>
           <div class="crosshair-h"></div>
           <div class="crosshair-v"></div>
+          <div class="hero-target-tick t-n" aria-hidden="true">N</div>
+          <div class="hero-target-tick t-e" aria-hidden="true">E</div>
+          <div class="hero-target-tick t-s" aria-hidden="true">S</div>
+          <div class="hero-target-tick t-w" aria-hidden="true">W</div>
+          <div class="hero-target-dot"></div>
           <div class="hero-target-label">TGT // ACOUSTIC SIGNATURE</div>
         </div>
       </div>
@@ -98,22 +135,28 @@
         </p>
         <ul class="mission-points">
           <li>
-            <span class="bullet">&#9632;</span>
-            <strong>PASSIVE DETECTION.</strong>
-            Acoustic arrays identify rotor and propulsion signatures with no
-            transmitted energy.
+            <span class="bullet" aria-hidden="true">&#9632;</span>
+            <div class="mission-point-body">
+              <strong>PASSIVE DETECTION.</strong>
+              Acoustic arrays identify rotor and propulsion signatures with no
+              transmitted energy.
+            </div>
           </li>
           <li>
-            <span class="bullet">&#9632;</span>
-            <strong>MULTI-NODE LOCALIZATION.</strong>
-            Distributed sensor geometry resolves bearing and range without
-            depending on the threat&rsquo;s emissions.
+            <span class="bullet" aria-hidden="true">&#9632;</span>
+            <div class="mission-point-body">
+              <strong>MULTI-NODE LOCALIZATION.</strong>
+              Distributed sensor geometry resolves bearing and range without
+              depending on the threat&rsquo;s emissions.
+            </div>
           </li>
           <li>
-            <span class="bullet">&#9632;</span>
-            <strong>RESPONSIBLE R&amp;D.</strong>
-            All demonstrations are software-simulated. No live emitters, no
-            operational parameters published.
+            <span class="bullet" aria-hidden="true">&#9632;</span>
+            <div class="mission-point-body">
+              <strong>RESPONSIBLE R&amp;D.</strong>
+              All demonstrations are software-simulated. No live emitters, no
+              operational parameters published.
+            </div>
           </li>
         </ul>
       </div>
@@ -215,6 +258,10 @@
             <span class="contact-label">REQUESTS</span>
             <span class="contact-value">BRIEFINGS &middot; PARTNERSHIPS &middot; R&amp;D INQUIRIES</span>
           </div>
+          <div class="contact-line">
+            <span class="contact-label">POSTURE</span>
+            <span class="contact-value">U.S.-BASED &middot; ITAR-AWARE &middot; PRE-REVENUE R&amp;D</span>
+          </div>
         </div>
         <a class="btn btn-primary" href="mailto:info@acu-labs.com?subject=ACU%20Labs%20Briefing%20Request">OPEN CHANNEL &rarr;</a>
       </div>
@@ -229,9 +276,9 @@
       </div>
       <div class="footer-meta">
         <span>&copy; <span id="year"></span> ACU LABS</span>
-        <span class="dot">&middot;</span>
+        <span class="dot" aria-hidden="true">&middot;</span>
         <span>SIMULATION-ONLY</span>
-        <span class="dot">&middot;</span>
+        <span class="dot" aria-hidden="true">&middot;</span>
         <span>NO PHYSICAL OUTPUT</span>
       </div>
     </div>
@@ -239,6 +286,28 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      function setOpen(open) {
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        document.body.classList.toggle('nav-open', open);
+      }
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') !== 'true';
+        setOpen(open);
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
   </script>
 </body>
 </html>

@@ -4,14 +4,14 @@ import { useScenario } from '../context/ScenarioContext'
 import { SimBadge } from '../components/SimBadge'
 import type { NavTab } from '../types'
 
-function buildSimData(elapsed: number, authTime: number | null, fps: number) {
+function buildSimData(elapsed: number, authTime: number | null) {
   const data = []
   const start = authTime ?? elapsed
-  for (let t = 0; t <= 120; t += 2) {
+  for (let t = 0; t <= 30; t += 0.5) {
     const simT = t - start
     const simFps = authTime === null
       ? 30
-      : simT < 0 ? 30 : Math.max(18, 30 - 12 * (1 - Math.exp(-simT / 8)))
+      : simT < 0 ? 30 : Math.max(18, 30 - 12 * (1 - Math.exp(-simT / 2)))
     const lq = Math.round((simFps / 30) * 100)
     data.push({
       t,
@@ -34,7 +34,7 @@ export default function SimulatedNeutralization({ onNavigate }: Props) {
   const canAuthorize = ['classified', 'awaiting_auth'].includes(phase)
   const isSimulating = phase === 'simulating'
   const isNeutralized = phase === 'neutralized' || phase === 'reported'
-  const simData = buildSimData(elapsed, authTime, fps)
+  const simData = buildSimData(elapsed, authTime)
   const lqPct = Math.round(linkQuality * 100)
 
   const handleConfirm = () => {

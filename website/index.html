@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ACU Labs — Acoustic Counter-UAS research and development. Detecting fiber-optic drones beyond the reach of RF." />
+  <title>ACU LABS // Acoustic Counter-UAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">[ ACU ]</span>
+        <span class="brand-divider">//</span>
+        <span class="brand-name">ACOUSTIC COUNTER-UAS</span>
+      </div>
+      <nav class="nav">
+        <a href="#mission">Mission</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#tech">Technology</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="classification-bar">
+      <span>UNCLASSIFIED // RESEARCH DEMONSTRATION</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-tags">
+          <span class="tag tag-amber">R&amp;D</span>
+          <span class="tag">SIMULATION-ONLY</span>
+          <span class="tag">SECTOR: DEFENSE</span>
+        </div>
+        <h1>
+          <span class="hero-line-1">DETECTING WHAT</span>
+          <span class="hero-line-2">RF CANNOT SEE.</span>
+        </h1>
+        <p class="hero-sub">
+          ACU Labs develops acoustic sensing systems to identify and localize
+          fiber-optic UAVs &mdash; threats that evade conventional
+          radio-frequency detection by design.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">REQUEST BRIEFING</a>
+          <a class="btn btn-ghost" href="#tech">VIEW TECHNOLOGY &rarr;</a>
+        </div>
+        <dl class="hero-stats">
+          <div>
+            <dt>SENSOR ARRAY</dt>
+            <dd>4-NODE</dd>
+          </div>
+          <div>
+            <dt>DETECTION MODE</dt>
+            <dd>PASSIVE / ACOUSTIC</dd>
+          </div>
+          <div>
+            <dt>STATUS</dt>
+            <dd class="status-live">DEMONSTRATION</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-frame" aria-hidden="true">
+        <div class="hero-frame-corner tl"></div>
+        <div class="hero-frame-corner tr"></div>
+        <div class="hero-frame-corner bl"></div>
+        <div class="hero-frame-corner br"></div>
+        <div class="hero-target">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="crosshair-h"></div>
+          <div class="crosshair-v"></div>
+          <div class="hero-target-label">TGT // ACOUSTIC SIGNATURE</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="section-header">
+        <span class="section-tag">01 //</span>
+        <h2>MISSION</h2>
+      </div>
+      <div class="mission-grid">
+        <p class="mission-lead">
+          Fiber-optic drones operate without radio emissions. They cannot be
+          detected, classified, or defeated by RF-centric counter-UAS systems.
+          ACU Labs treats this gap as the next operational frontier.
+        </p>
+        <ul class="mission-points">
+          <li>
+            <span class="bullet">&#9632;</span>
+            <strong>PASSIVE DETECTION.</strong>
+            Acoustic arrays identify rotor and propulsion signatures with no
+            transmitted energy.
+          </li>
+          <li>
+            <span class="bullet">&#9632;</span>
+            <strong>MULTI-NODE LOCALIZATION.</strong>
+            Distributed sensor geometry resolves bearing and range without
+            depending on the threat&rsquo;s emissions.
+          </li>
+          <li>
+            <span class="bullet">&#9632;</span>
+            <strong>RESPONSIBLE R&amp;D.</strong>
+            All demonstrations are software-simulated. No live emitters, no
+            operational parameters published.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">02 //</span>
+        <h2>CAPABILITIES</h2>
+      </div>
+      <div class="cap-grid">
+        <article class="cap-card">
+          <div class="cap-header">
+            <span class="cap-id">C-01</span>
+            <h3>ACOUSTIC SIGNATURE ANALYSIS</h3>
+          </div>
+          <p>
+            Spectrogram-based classification of rotor harmonics, motor whine,
+            and aerodynamic noise across the audible and near-ultrasonic band.
+          </p>
+        </article>
+        <article class="cap-card">
+          <div class="cap-header">
+            <span class="cap-id">C-02</span>
+            <h3>MULTI-SENSOR GEOMETRY</h3>
+          </div>
+          <p>
+            Four distributed nodes resolve bearing-of-arrival, with
+            uncertainty bounds visualized in real time.
+          </p>
+        </article>
+        <article class="cap-card">
+          <div class="cap-header">
+            <span class="cap-id">C-03</span>
+            <h3>FIBER COUPLING RESEARCH</h3>
+          </div>
+          <p>
+            Investigation of acoustic-to-fiber coupling pathways using
+            G657A2-class spools as candidate distributed sensing media.
+          </p>
+        </article>
+        <article class="cap-card">
+          <div class="cap-header">
+            <span class="cap-id">C-04</span>
+            <h3>EVIDENCE-GRADE LOGGING</h3>
+          </div>
+          <p>
+            Every detection event is timestamped, justified, and exportable as
+            structured audit data for downstream review.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tech" class="section">
+      <div class="section-header">
+        <span class="section-tag">03 //</span>
+        <h2>TECHNOLOGY</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-copy">
+          <h3>FIBERSENTRY ACOUSTIC</h3>
+          <p>
+            FiberSentry Acoustic is our research platform for fiber-optic UAV
+            detection. The system combines distributed acoustic sensing,
+            passive multi-node geometry, and signature-driven classification.
+          </p>
+          <p>
+            The current build is a <strong>simulation-only demonstration</strong>
+            intended for investor and partner briefings. No live transmitters,
+            no operational tuning, no countermeasure parameters.
+          </p>
+        </div>
+        <ul class="tech-stack">
+          <li><span>01</span><div><strong>SENSING</strong><em>Distributed acoustic, 4-node array</em></div></li>
+          <li><span>02</span><div><strong>CLASSIFICATION</strong><em>Signature library, confidence scoring</em></div></li>
+          <li><span>03</span><div><strong>LOCALIZATION</strong><em>Bearing fusion w/ uncertainty ellipse</em></div></li>
+          <li><span>04</span><div><strong>REPORTING</strong><em>Structured event log, JSON export</em></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">04 //</span>
+        <h2>CONTACT</h2>
+      </div>
+      <div class="contact-card">
+        <div class="contact-lines">
+          <div class="contact-line">
+            <span class="contact-label">CHANNEL</span>
+            <span class="contact-value">SECURE EMAIL</span>
+          </div>
+          <div class="contact-line">
+            <span class="contact-label">ADDRESS</span>
+            <a class="contact-value contact-link" href="mailto:info@acu-labs.com">info@acu-labs.com</a>
+          </div>
+          <div class="contact-line">
+            <span class="contact-label">REQUESTS</span>
+            <span class="contact-value">BRIEFINGS &middot; PARTNERSHIPS &middot; R&amp;D INQUIRIES</span>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="mailto:info@acu-labs.com?subject=ACU%20Labs%20Briefing%20Request">OPEN CHANNEL &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">[ ACU ]</span>
+        <span>ACOUSTIC COUNTER-UAS &middot; RESEARCH &amp; DEVELOPMENT</span>
+      </div>
+      <div class="footer-meta">
+        <span>&copy; <span id="year"></span> ACU LABS</span>
+        <span class="dot">&middot;</span>
+        <span>SIMULATION-ONLY</span>
+        <span class="dot">&middot;</span>
+        <span>NO PHYSICAL OUTPUT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
